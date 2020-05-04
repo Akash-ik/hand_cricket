@@ -1,0 +1,72 @@
+*{
+    margin: 0px;
+}
+body{
+    background-color: blue;
+}
+body > header{
+    background-color:green;
+    text-align: center;
+    padding: 30px;
+    color:white;
+}
+.opt{
+    text-align: center;
+}
+.opt img{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 5px solid black;
+    padding: 0px;
+    margin: 20px;
+}
+.num{
+    display: inline-block;
+    transition: all 0.3s ease ;
+}
+
+.num:hover{
+    cursor: pointer;
+    background: brown;
+}
+
+.move p{
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.score{
+    display: inline-block;
+    height: 100px;
+    width: 200px;
+    border: 5px solid black;
+    margin: 50px;
+    font-size: 20px;
+    color: white;
+}
+
+.scorecard{
+    text-align: center;
+    margin: 50px;
+
+}
+
+.score p{
+    padding: 10px
+}
+#pop{
+    text-align: center;
+    align-self: center;
+    font-size: 10px;
+    color: white;
+    background-color: black;
+    width: 200px;
+    height: 50px;
+}
+#popp{
+    padding:10px;
+    margin:10px;
+}
