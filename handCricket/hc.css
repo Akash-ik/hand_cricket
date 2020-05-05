@@ -57,14 +57,13 @@ body > header{
 .score p{
     padding: 10px
 }
-#pop{
+.pop{
     text-align: center;
-    align-self: center;
     font-size: 10px;
     color: white;
     background-color: black;
     width: 200px;
-    height: 50px;
+    height: 100px;
 }
 #popp{
     padding:10px;

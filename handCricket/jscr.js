@@ -7,11 +7,13 @@ const six_div = document.getElementById("six");
 const us_p = document.getElementById("us");
 const cs_p = document.getElementById("cs");
 const popp_p = document.getElementById("popp")
+const stat_p = document.getElementById("status")
 
 var us = 0;
 var cs = 0;
 var innings = 1;
 var chance;
+var flag = 0;
 chance = "batting"
 function getcomputer_choice(){
     return Math.floor(Math.random()*6 + 1)
@@ -34,9 +36,12 @@ function play(user_choice){
     console.log("computer choice:"+computer_choice)
     console.log("User Choice:"+user_choice)
     console.log("User Score:"+us_p);
+    stat_p.innerHTML = "You are "+chance;
+
 
     if(chance === "batting"){
         if(user_choice != computer_choice){
+            popp_p.innerHTML=" ";
             us = us + user_choice;
             us_p.innerHTML= us;
             if (innings == 2 && us>cs){
@@ -45,6 +50,7 @@ function play(user_choice){
         }
         else{
             popp_p.innerHTML="You are Out!";
+            flag = 1;
             chance = "bowling";
             innings++;
             if(innings>2){
@@ -54,6 +60,7 @@ function play(user_choice){
     }
     else{
         if(user_choice != computer_choice){
+            popp_p.innerHTML=" ";
             cs = cs + computer_choice;
             cs_p.innerHTML= cs;
             if (innings == 2 && cs>us){
@@ -63,6 +70,7 @@ function play(user_choice){
         else{
             popp_p.innerHTML="Computer is Out!";
             chance = "batting";
+            flag = 1;
             innings++;
             if(innings>2){
                 result();
@@ -74,7 +82,7 @@ function play(user_choice){
 }
 
 function main(){
-
+stat_p.innerHTML = "You are "+chance;
 one_div.addEventListener('click',function(){
     play(1);
 })
@@ -97,3 +105,8 @@ six_div.addEventListener('click',function(){
 
 }
 main();
+
+function start(){
+
+    
+}
