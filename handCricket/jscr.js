@@ -105,8 +105,3 @@ six_div.addEventListener('click',function(){
 
 }
 main();
-
-function start(){
-
-    
-}
